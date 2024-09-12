@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("path_to_fonts/Pretendard-Regular.woff2") format("woff2"),
+    url("path_to_fonts/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  font-family: "Pretendard", sans-serif;
+  position: relative;
+  width: 988px;
+  height: 663px;
+  top: 209px;
+  left: 466px;
+  box-shadow: 16px 16px 20px 0px rgba(0, 0, 0, 0.03);
+  border-radius: 24px;
+}
+.login-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 540px;
+  height: 662px;
+  border-radius: 0px 24px 24px 0px;
+
+  background: rgba(255, 255, 255, 1);
+}
+.login-container img {
+  margin-top: 98px;
+  margin-left: 127px;
+}
+.form-image {
+  background: rgba(3, 66, 142, 1);
+  width: 448px;
+  height: 662px;
+  gap: 0px;
+  border-radius: 24px 0px 0px 24px;
+  opacity: 0px;
+}
+.form-image img {
+  margin-top: 245px;
+  margin-left: 72px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 101px;
+  margin-top: 63px;
+}
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+
+  font-size: 14px;
+  color: rgba(128, 128, 128, 1);
+}
+
+.login-form input {
+  width: 340px;
+  height: 48px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #b3b3b3;
+  background: #eceff1;
+  font-size: 16px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 9px;
+  justify-content: left;
+}
+
+.checkbox-container > input {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+}
+
+.login-btn {
+  font-family: "Pretendard", sans-serif;
+  width: 340px;
+  height: 56px;
+  background-color: rgba(3, 66, 142, 1);
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Link Styling */
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  border: 1px solid rgba(128, 128, 128, 1);
+  width: 100px;
+  padding: 4px;
+  text-align: center;
+  height: 32px;
+  color: #808080;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
