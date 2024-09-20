@@ -1,0 +1,208 @@
+<header>
+    <a href="#" class="logo-text">
+      <img src="../../img/img_logo.png " alt="Logo" class="logo" />
+    </a>
+    <div class="weather-user-section">
+      <div class="REC-PPA">
+        <div class="REC">
+          REC 정보
+          <div class="AVG">
+            평균
+            <div class="price-1">74,949</div>
+          </div>
+        </div>
+        <div class="PPA">
+          PPA 정보
+          <div class="price">135.69</div>
+        </div>
+      </div>
+      <div class="weather">
+        <span class="location-weather">
+          인천남동 산업단지
+          <img src="../../img/sun.png" alt="" />
+          <span class="Gradus"> 26°C</span>
+        </span>
+        <img src="../../img/umbrella.png" alt="" />
+        <span> 20%</span>
+        <img src="../../img/water.png" alt="" />
+        <span>25%</span>
+        <img src="../../img/wind.png" alt="" />
+        <span>16m/s</span>
+      </div>
+      <div class="user-info">
+        <img src="../../img/bell1.png" alt="" />
+        <span class="bold">알림</span>
+        <span class="notif">3</span>
+        <img src="../../img/SortDown.png" alt="" />
+        <img class="user-icon" src="../../img/Sample_User_Icon.png" alt="" />
+        <span class="bold">홍길동</span>
+        <span>관리자</span>
+        <img src="../../img/SortDown.png" alt="" />
+      </div>
+    </div>
+  </header>
+
+
+
+body {
+  position: relative;
+}
+/*Header*/
+header {
+  font-family: "Pretendard-Regular";
+  width: 1920px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 10px 0px #00000014;
+}
+.logo-text {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 30px;
+  margin-top: 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+.REC-PPA {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.REC {
+  width: 92px;
+  border: 1px solid #dedede;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 48px;
+  color: #363636;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.PPA {
+  border: 1px solid #dedede;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 13px;
+  width: 92px;
+  height: 48px;
+  display: flex;
+  font-weight: 500;
+  flex-direction: column;
+  justify-content: center;
+}
+.AVG {
+  display: flex;
+  justify-content: space-evenly;
+  color: #3069b3;
+  font-weight: 500;
+  align-items: center;
+}
+.price-1 {
+  font-size: 16px;
+  color: #3069b3;
+  font-weight: 700;
+}
+.price {
+  font-size: 16px;
+  color: #119891;
+  font-weight: 700;
+}
+
+.weather-user-section {
+  display: flex;
+
+  gap: 20px; /* Space between weather and user info */
+  padding: 10px 20px;
+  margin-left: 30px;
+}
+
+.weather {
+  display: flex;
+  gap: 17px;
+  font-size: 14px;
+  align-items: center;
+  background: #f4f4f4;
+  max-width: 493px;
+  max-height: 50px;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+.location-weather {
+  background: white;
+  max-width: 211px;
+  max-height: 36px;
+  font-size: 13px;
+  border-radius: 10px;
+  align-items: center;
+
+  display: flex;
+  font-weight: 600;
+  padding: 4px 10px 4px 10px;
+}
+.Gradus {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.64px;
+  text-align: left;
+}
+.user-info {
+  display: flex;
+  gap: 10px; /* Space between notification, username, and dropdown */
+  font-size: 14px;
+  align-items: center;
+}
+
+.user-info span {
+  cursor: pointer;
+}
+
+.notif {
+  background-color: #2ec9d6;
+  border-radius: 100%;
+  width: 24px;
+  height: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: white;
+}
+
+.account {
+  width: 18px;
+  height: 18px;
+}
+
+.bold {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.09px;
+  text-align: left;
+}
+.user-info span:last-of-type {
+  color: rgba(160, 160, 160, 1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  text-align: left;
+}
+
+.user-icon {
+  width: 18px;
+  height: 18px;
+}
+/*Header*/

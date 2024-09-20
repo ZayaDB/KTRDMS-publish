@@ -73,14 +73,14 @@
             </ul>
             <li>
               <a
-                href="../pages/main.jsp"
+                href="../html/현황정보/page1_1.html"
                 onclick="updateBreadcrumb('현황정보 > 대시보드')"
                 >직접 PPA 서비스</a
               >
             </li>
             <li>
               <a
-                href="../pages/pal.jsp"
+                href="../html/현황정보/page1_2.html"
                 onclick="updateBreadcrumb('현황정보 > 대시보드')"
                 >전국 발전소 현황</a
               >
@@ -315,7 +315,43 @@
         </div>
       </div>
     </div>
-
+    <!-- 매도카트 -->
+    <div class="container-410">
+      <div class="card410-header">
+        <h2>매도</h2>
+        <div class="card410content">
+          <div class="price-high">
+            <span>고가</span>
+            <span>195원/kWh</span>
+          </div>
+          <div class="price-low">
+            <span>저가</span>
+            <span>165원/kWh</span>
+          </div>
+        </div>
+        <div class="price-graph">
+          <img src="../img/Group427319802.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="container-409">
+      <div class="card410-header">
+        <h2>매수</h2>
+        <div class="card410content">
+          <div class="price-high">
+            <span>고가</span>
+            <p>195원/kWh</p>
+          </div>
+          <div class="price-low">
+            <span>저가</span>
+            <p>165원/kWh</p>
+          </div>
+        </div>
+        <div class="price-graph">
+          <img src="../img/Group34722.png" alt="" />
+        </div>
+      </div>
+    </div>
     <!-- 매수 주문 -->
     <div class="container-412">
       <hr class="line" />
@@ -325,7 +361,7 @@
       </div>
       <div class="tab-content active" id="tab1">
         <div id="info" class="content active">
-          <table>
+          <table id="table1">
             <thead>
               <tr>
                 <th>발전소명</th>
@@ -336,7 +372,7 @@
                 <th>예상거래단가(원/kWh)</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody1">
               <tr>
                 <td>발전소명</td>
                 <td>지역</td>
@@ -395,14 +431,130 @@
               </tr>
             </tbody>
           </table>
+          <!-- 모달 창 -->
+          <div id="modal5" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>발전사업자 정보</h2>
+              <p>발전소 정보가 여기에 표시됩니다.</p>
+            </div>
+          </div>
+
           <div class="btn-container">
             <button class="btn-order">매수 주문</button>
           </div>
         </div>
       </div>
-      <div class="tab-content" id="tab2">
-        <h2>Tab 2 Content</h2>
-        <p>This is the content for Tab 2.</p>
+      <div class="tab-content" id="tab2"></div>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          단가 정정
+        </div>
+
+        <!-- 표 형식으로 구성된 Form -->
+        <form id="priceAdjustmentForm">
+          <table>
+            <tr>
+              <th>발전원*</th>
+              <td style="border-top: 1px solid">
+                <label><input type="checkbox" /> 태양광</label>
+                <label><input type="checkbox" /> 수력</label>
+                <label><input type="checkbox" /> 풍력</label>
+                <label><input type="checkbox" /> 해양</label>
+                <label><input type="checkbox" /> 지열</label>
+                <label><input type="checkbox" /> 바이오</label>
+              </td>
+            </tr>
+            <tr>
+              <th>발전소명*</th>
+              <td><input type="text" placeholder="발전소명을 입력하세요" /></td>
+            </tr>
+            <tr>
+              <th>설비 승인 단계</th>
+              <td>
+                <select>
+                  <option value="사용전 검사">사용전 검사</option>
+                  <option value="준공">준공</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>주소*</th>
+              <td style="display: flex; border: none">
+                <input type="text" placeholder="주소를 입력하세요" />
+                <button class="table-button" type="button">주소검색</button>
+              </td>
+            </tr>
+            <tr>
+              <th>상세주소</th>
+              <td><input type="text" placeholder="상세주소를 입력하세요" /></td>
+            </tr>
+            <tr>
+              <th>계약가능 설비용량</th>
+              <td>
+                <input
+                  type="text"
+                  placeholder="계약 가능한 설비용량을 입력하세요"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>계약가능 연간 공급량</th>
+              <td><input type="text" placeholder="350,000 kWh" /></td>
+            </tr>
+            <tr>
+              <th>계약희망 판매단가</th>
+              <td>
+                <input
+                  type="text"
+                  placeholder="150 원/kWh"
+                  style="background-color: #f0f8ff"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>가중치(선택항목)</th>
+              <td><input type="text" placeholder="0.7" /></td>
+            </tr>
+            <tr>
+              <th>희망계약기간</th>
+              <td><input type="text" placeholder="10 년" /></td>
+            </tr>
+            <tr>
+              <th>공급개시 가능일</th>
+              <td><input type="text" placeholder="날짜를 입력해 주세요." /></td>
+            </tr>
+            <tr>
+              <th>첨부파일</th>
+              <td>
+                <div class="file-upload">파일업로드</div>
+                <ul class="file-list">
+                  <li>
+                    <span class="file-name">발전소사진.jpg (496 KiB)</span>
+                    <span class="file-remove">&times;</span>
+                  </li>
+                  <li>
+                    <span class="file-name">발전사업허가증.jpg (496 KiB)</span>
+                    <span class="file-remove">&times;</span>
+                  </li>
+                  <li>
+                    <span class="file-name">사업자등록증.jpg (496 KiB)</span>
+                    <span class="file-remove">&times;</span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Form actions -->
+          <div class="form-actions">
+            <button type="button" class="btn-cancel">취소</button>
+            <button type="submit" class="btn-submit">등록신청</button>
+          </div>
+        </form>
       </div>
     </div>
     <div class="container-413">
@@ -411,13 +563,183 @@
         <div class="tab active" data-tab="tab3">매도 정보</div>
         <div class="tab" data-tab="tab4">단가 정정</div>
       </div>
+      <!-- 매도 주문 -->
       <div class="tab-content active" id="tab3">
-        <h2>Tab 1 Content</h2>
-        <p>This is the content for Tab 1.</p>
+        <div id="info">
+          <table id="table2">
+            <thead>
+              <tr>
+                <th>희망구매단가</th>
+                <th>전기사용자명</th>
+                <th>지역</th>
+                <th>희망 구매용량</th>
+                <th>종별 요금제</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody2">
+              <tr>
+                <td>172</td>
+                <td>(주)레플러스</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+              <tr>
+                <td>170</td>
+                <td>케이티</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+              <tr>
+                <td>169</td>
+                <td>JWP</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+              <tr class="highlight">
+                <td>168</td>
+                <td>메코사인</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+              <tr>
+                <td>166</td>
+                <td>전기사용자명</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+              <tr>
+                <td>165</td>
+                <td>전기사용자명</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+              <tr>
+                <td>164</td>
+                <td>전기사용자명</td>
+                <td>서울</td>
+                <td>희망 구매용량</td>
+                <td>일반용(을)</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="modal6" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>전기사용자 정보</h2>
+              <p>발전소 정보가 여기에 표시됩니다.</p>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="btn-order">매수 주문</button>
+          </div>
+        </div>
       </div>
       <div class="tab-content" id="tab4">
         <h2>Tab 2 Content</h2>
         <p>This is the content for Tab 2.</p>
+      </div>
+      <div id="modal2" class="modal">
+        <div class="modal-content2">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            단가 정정
+          </div>
+
+          <!-- 표 형식으로 구성된 Form -->
+          <form id="priceAdjustmentForm">
+            <table>
+              <tr>
+                <th>발전원*</th>
+                <td style="border-top: 1px solid">
+                  <label><input type="checkbox" /> 태양광</label>
+                  <label><input type="checkbox" /> 수력</label>
+                  <label><input type="checkbox" /> 풍력</label>
+                  <label><input type="checkbox" /> 해양</label>
+                  <label><input type="checkbox" /> 지열</label>
+                  <label><input type="checkbox" /> 바이오</label>
+                </td>
+              </tr>
+              <tr>
+                <th>유휴부지(선택)</th>
+                <td style="border-top: 1px solid">
+                  <label><input type="checkbox" /> 태양광</label>
+                  <label><input type="checkbox" /> 주차장</label>
+                  <label><input type="checkbox" /> 기타</label>
+                </td>
+              </tr>
+              <tr>
+                <th>면적</th>
+                <td>
+                  <input type="text" placeholder="30,000 (m2)" />
+                </td>
+              </tr>
+              <tr>
+                <th>주소*</th>
+                <td style="display: flex; border: none">
+                  <input type="text" placeholder="주소를 입력하세요" />
+                  <button class="table-button" type="button">주소검색</button>
+                </td>
+              </tr>
+              <tr>
+                <th>상세주소</th>
+                <td>
+                  <input type="text" placeholder="상세주소를 입력하세요" />
+                </td>
+              </tr>
+              <tr>
+                <th>계약가능 설비용량</th>
+                <td>
+                  <input type="text" placeholder="300,000 kWh" />
+                </td>
+              </tr>
+              <tr>
+                <th>계약희망 판매단가</th>
+                <td><input type="text" placeholder="170 원/kWh" /></td>
+              </tr>
+              <tr>
+                <th>희망계약기간</th>
+                <td>
+                  <input type="date" placeholder="2024.11.11" />
+                </td>
+              </tr>
+
+              <tr>
+                <th>첨부파일</th>
+                <td>
+                  <div class="file-upload">파일업로드</div>
+                  <ul class="file-list">
+                    <li>
+                      <span class="file-name">발전소사진.jpg (496 KiB)</span>
+                      <span class="file-remove">&times;</span>
+                    </li>
+                    <li>
+                      <span class="file-name"
+                        >발전사업허가증.jpg (496 KiB)</span
+                      >
+                      <span class="file-remove">&times;</span>
+                    </li>
+                    <li>
+                      <span class="file-name">사업자등록증.jpg (496 KiB)</span>
+                      <span class="file-remove">&times;</span>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Form actions -->
+            <div class="form-actions">
+              <button type="button" class="btn-cancel">취소</button>
+              <button type="submit" class="btn-submit">등록신청</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <footer>

@@ -1,0 +1,293 @@
+<aside class="sidebar">
+      <ul class="menu">
+        <li>
+          <div class="menu-item" onclick="toggleMenu('현황정보')">
+            <img src="../../img/Frame_6340902.png" alt="" />
+            현황정보
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="현황정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="현황정보" class="submenu">
+            <ul>
+              대시보드
+            </ul>
+            <li>
+              <a
+                href="../../pages/main.jsp"
+                onclick="updateBreadcrumb('현황정보 > 대시보드')"
+                >직접 PPA 서비스</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../pages/pal.jsp"
+                onclick="updateBreadcrumb('현황정보 > 대시보드')"
+                >전국 발전소 현황</a
+              >
+            </li>
+            <li><a href="../../index.jsp">직접 PPA 계약 현황</a></li>
+            <li><a href="">실시간 공급-수요 현황</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('계약정보')">
+            <img src="../../img/Vector321.png" alt="" />
+            계약정보
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="계약정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="계약정보" class="submenu">
+            <ul>
+              전력거래 매물
+            </ul>
+            <li><a href="">전력거래 매물 현황</a></li>
+            <li><a href="">전력 판매 정보</a></li>
+            <li><a href="">전력 구매 정보</a></li>
+            <li><a href="">계약 단계별 진행현황</a></li>
+            <ul>
+              계약 관리(관리자)
+            </ul>
+            <li><a href="">계약등록</a></li>
+            <li><a href="">공동계약등록</a></li>
+            <li><a href="">계약목록</a></li>
+            <li><a href="">최종계약목록(거래유형)</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('거래정산')">
+            <img src="../../img/Vector322.png" alt="" />
+            거래정산
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="계약정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="거래정산" class="submenu">
+            <ul>
+              청구/정산
+            </ul>
+            <li><a href="">발전사업자</a></li>
+            <li><a href="">전기사용자</a></li>
+            <ul>
+              전력거래소 청구
+            </ul>
+            <li><a href="">청구 조회</a></li>
+            <li><a href="">거래소 데이터 관리</a></li>
+            <ul>
+              한국전력 청구
+            </ul>
+            <li><a href="">청구 조회</a></li>
+            <li><a href="">청구자료 등록</a></li>
+            <li><a href="">한전 데이터 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('통계정보')">
+            <img src="../../img/Vector323.png" alt="" />
+            통계정보
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="통계정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="통계정보" class="submenu">
+            <ul>
+              한국산업단지 전용
+            </ul>
+            <li><a href="">공급·수요 운영실적</a></li>
+            <li><a href="">전력거래 수익 통계</a></li>
+            <ul>
+              재생에너지 전기공급자용
+            </ul>
+            <li><a href="">전력거래 통계</a></li>
+            <li><a href="">거래항목별 통계</a></li>
+            <li><a href="">발전 통계</a></li>
+            <li><a href="">계약 통계</a></li>
+            <ul>
+              발전사업자용
+            </ul>
+            <li><a href="">발전현황</a></li>
+            <ul>
+              전기사용자용
+            </ul>
+            <li><a href="">전기사용현황</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('고객관리')">
+            <img src="../../img/Vector324.png" alt="" />
+            고객관리
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="고객관리-icon"
+              alt=""
+            />
+          </div>
+          <ul id="고객관리" class="submenu">
+            <ul>
+              고객센터
+            </ul>
+            <li><a href="">공지사항</a></li>
+            <li><a href="">자주 묻는 질문</a></li>
+            <li><a href="">유관기관 사이트</a></li>
+            <li><a href="">KT RDMS 소개</a></li>
+            <li><a href="">개인정보처리지침</a></li>
+            <li><a href="">서비스약관</a></li>
+            <ul>
+              고객정보(관리자)
+            </ul>
+            <li><a href="">전기사용자 정보관리</a></li>
+            <li><a href="">발전사업자 정보관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('시스템설정')">
+            <img src="../../img/Vector325.png" alt="" />
+            시스템설정
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="시스템설정-icon"
+              alt=""
+            />
+          </div>
+          <ul id="시스템설정" class="submenu">
+            <ul>
+              시스템 관리(관리자)
+            </ul>
+            <li><a href="">사용자 그룹(SSO)</a></li>
+            <li><a href="">사용자 등록(SSO)</a></li>
+            <li><a href="">메뉴권한(SSO)</a></li>
+            <li><a href="">로그인 로그</a></li>
+            <li><a href="">시스템 로그</a></li>
+            <li><a href="">메뉴 로그</a></li>
+            <li><a href="">비상연락망 현황</a></li>
+            <li><a href="">비상연락망 등록</a></li>
+            <li><a href="">사용자권한신청조회(SSO)</a></li>
+            <li><a href="">사용자권한신청등록(SSO)</a></li>
+            <li><a href="">기준정보관리</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+.sidebar {
+  max-width: 260px;
+  height: 1018px;
+  background-color: #0a2b59;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 17px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 100%;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  top: 40px;
+}
+
+.menu-item:hover {
+  background-color: #112b5d;
+}
+
+.menu-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.submenu {
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  list-style: none;
+}
+.submenu ul {
+  position: relative;
+  list-style-type: none;
+  top: 46px;
+  left: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+.submenu a::before {
+  content: "• "; /* a 태그 앞에 불릿 추가 */
+  color: rgba(154, 164, 183, 1); /* 불릿 색상 */
+}
+.submenu li {
+  margin-bottom: 16px;
+}
+.submenu a {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 9px;
+  color: #9aa4b7;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  top: 40px;
+  left: 23px;
+  text-indent: -13px;
+}
+
+.submenu a:hover {
+  color: #5ddfde;
+}
+
+.rotate {
+  transform: rotate(180deg); /* Rotate the chevron when active */
+}
+
+.fas {
+  margin-left: 80px;
+  display: flex;
+  align-items: baseline;
+}
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: rgba(51, 51, 51, 1);
+  position: absolute;
+  top: 106px;
+  right: 42px;
+}
+
+.breadcrumb img {
+  vertical-align: middle;
+}
+
+.breadcrumb span {
+  margin-left: 5px;
+}
+/* sidemenu */

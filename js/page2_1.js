@@ -36,24 +36,101 @@ window.onload = function () {
   });
 };
 
-// 탭 버튼과 콘텐츠를 모두 가져옴
-const tabs = document.querySelectorAll(".tab");
-const contents = document.querySelectorAll(".tab-content");
-
-// 각 탭을 클릭했을 때 실행되는 함수
-tabs.forEach((tab) => {
+// JavaScript to handle tab clicks
+document.querySelectorAll(".tab").forEach((tab) => {
   tab.addEventListener("click", function () {
-    // 모든 탭에서 'active' 클래스 제거
-    tabs.forEach((t) => t.classList.remove("active"));
+    const parentContainer = this.closest(".container-412");
+    parentContainer
+      .querySelectorAll(".tab")
+      .forEach((tab) => tab.classList.remove("active"));
+    parentContainer
+      .querySelectorAll(".tab-content")
+      .forEach((content) => content.classList.remove("active"));
 
-    // 모든 콘텐츠에서 'active' 클래스 제거
-    contents.forEach((c) => c.classList.remove("active"));
-
-    // 클릭한 탭에 'active' 클래스 추가
-    this.classList.add("active");
-
-    // 해당하는 탭의 콘텐츠를 표시
-    const target = this.getAttribute("data-tab");
-    document.getElementById(target).classList.add("active");
+    if (this.getAttribute("data-tab") !== "tab2") {
+      this.classList.add("active");
+      const tabId = this.getAttribute("data-tab");
+      parentContainer.querySelector(`#${tabId}`).classList.add("active");
+    } else {
+      document.getElementById("modal").style.display = "block";
+    }
   });
+});
+
+// 모달 및 탭 요소 선택
+const modal1 = document.getElementById("modal1");
+const modal2 = document.getElementById("modal2");
+const closeBtns = document.querySelectorAll(".close");
+const tab1 = document.querySelector('[data-tab="tab2"]');
+const tab2 = document.querySelector('[data-tab="tab4"]');
+
+// tab1 클릭 시 modal1 표시
+tab1.addEventListener("click", () => {
+  modal1.style.display = "block";
+});
+
+// tab2 클릭 시 modal2 표시
+tab2.addEventListener("click", () => {
+  modal2.style.display = "block";
+});
+
+// 모달 닫기 버튼 처리
+closeBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    modal1.style.display = "none";
+    modal2.style.display = "none";
+  });
+});
+
+// 모달 외부 클릭 시 닫기
+window.addEventListener("click", (event) => {
+  if (event.target === modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target === modal2) {
+    modal2.style.display = "none";
+  }
+});
+
+// tbody 내의 모든 tr을 선택
+const tableBody1 = document.getElementById("tableBody1");
+const tableBody2 = document.getElementById("tableBody2");
+const modal5 = document.getElementById("modal5");
+const modal6 = document.getElementById("modal6");
+const closeBtn = document.querySelector(".close");
+
+// 각 tr에 클릭 이벤트 추가
+tableBody1.addEventListener("click", function (event) {
+  // 클릭된 tr 요소 찾기
+  const clickedRow = event.target.closest("tr");
+
+  if (clickedRow) {
+    // 모달을 표시
+    modal5.style.display = "block";
+  }
+});
+tableBody2.addEventListener("click", function (event) {
+  // 클릭된 tr 요소 찾기
+  const clickedRow = event.target.closest("tr");
+
+  if (clickedRow) {
+    // 모달을 표시
+    modal6.style.display = "block";
+  }
+});
+
+// 모달 닫기 기능
+closeBtn.addEventListener("click", () => {
+  modal5.style.display = "none";
+  modal6.style.display = "none";
+});
+
+// 모달 외부 클릭 시 닫기
+window.addEventListener("click", (event) => {
+  if (event.target === modal5) {
+    modal5.style.display = "none";
+  }
+  if (event.target === modal6) {
+    modal6.style.display = "none";
+  }
 });

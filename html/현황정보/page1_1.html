@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/page1_1.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <script defer src="../../js/page1_1.js"></script>
+  </head>
+  <!-- header -->
+  <header>
+    <a href="#" class="logo-text">
+      <img src="../../img/img_logo.png " alt="Logo" class="logo" />
+    </a>
+    <div class="weather-user-section">
+      <div class="REC-PPA">
+        <div class="REC">
+          REC 정보
+          <div class="AVG">
+            평균
+            <div class="price-1">74,949</div>
+          </div>
+        </div>
+        <div class="PPA">
+          PPA 정보
+          <div class="price">135.69</div>
+        </div>
+      </div>
+      <div class="weather">
+        <span class="location-weather">
+          인천남동 산업단지
+          <img src="../../img/sun.png" alt="" />
+          <span class="Gradus"> 26°C</span>
+        </span>
+        <img src="../../img/umbrella.png" alt="" />
+        <span> 20%</span>
+        <img src="../../img/water.png" alt="" />
+        <span>25%</span>
+        <img src="../../img/wind.png" alt="" />
+        <span>16m/s</span>
+      </div>
+      <div class="user-info">
+        <img src="../../img/bell1.png" alt="" />
+        <span class="bold">알림</span>
+        <span class="notif">3</span>
+        <img src="../../img/SortDown.png" alt="" />
+        <img class="user-icon" src="../../img/Sample_User_Icon.png" alt="" />
+        <span class="bold">홍길동</span>
+        <span>관리자</span>
+        <img src="../../img/SortDown.png" alt="" />
+      </div>
+    </div>
+  </header>
+  <body>
+    <!-- sidemenu -->
+    <aside class="sidebar">
+      <ul class="menu">
+        <li>
+          <div class="menu-item" onclick="toggleMenu('현황정보')">
+            <img src="../../img/Frame_6340902.png" alt="" />
+            현황정보
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="현황정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="현황정보" class="submenu">
+            <ul>
+              대시보드
+            </ul>
+            <li>
+              <a href="../html/현황정보/page1_1.html">직접 PPA 서비스</a>
+            </li>
+            <li>
+              <a href="../../html/현황정보/page1_2.html">전국 발전소 현황</a>
+            </li>
+            <li><a href="../index.jsp">직접 PPA 계약 현황</a></li>
+            <li><a href="">실시간 공급-수요 현황</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('계약정보')">
+            <img src="../../img/Vector321.png" alt="" />
+            계약정보
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="계약정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="계약정보" class="submenu">
+            <ul>
+              전력거래 매물
+            </ul>
+            <li><a href="../page2_1.html">전력거래 매물 현황</a></li>
+            <li><a href="">전력 판매 정보</a></li>
+            <li><a href="">전력 구매 정보</a></li>
+            <li><a href="">계약 단계별 진행현황</a></li>
+            <ul>
+              계약 관리(관리자)
+            </ul>
+            <li><a href="">계약등록</a></li>
+            <li><a href="">공동계약등록</a></li>
+            <li><a href="">계약목록</a></li>
+            <li><a href="">최종계약목록(거래유형)</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('거래정산')">
+            <img src="../../img/Vector322.png" alt="" />
+            거래정산
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="계약정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="거래정산" class="submenu">
+            <ul>
+              청구/정산
+            </ul>
+            <li><a href="">발전사업자</a></li>
+            <li><a href="">전기사용자</a></li>
+            <ul>
+              전력거래소 청구
+            </ul>
+            <li><a href="">청구 조회</a></li>
+            <li><a href="">거래소 데이터 관리</a></li>
+            <ul>
+              한국전력 청구
+            </ul>
+            <li><a href="">청구 조회</a></li>
+            <li><a href="">청구자료 등록</a></li>
+            <li><a href="">한전 데이터 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('통계정보')">
+            <img src="../../img/Vector323.png" alt="" />
+            통계정보
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="통계정보-icon"
+              alt=""
+            />
+          </div>
+          <ul id="통계정보" class="submenu">
+            <ul>
+              한국산업단지 전용
+            </ul>
+            <li><a href="">공급·수요 운영실적</a></li>
+            <li><a href="">전력거래 수익 통계</a></li>
+            <ul>
+              재생에너지 전기공급자용
+            </ul>
+            <li><a href="">전력거래 통계</a></li>
+            <li><a href="">거래항목별 통계</a></li>
+            <li><a href="">발전 통계</a></li>
+            <li><a href="">계약 통계</a></li>
+            <ul>
+              발전사업자용
+            </ul>
+            <li><a href="">발전현황</a></li>
+            <ul>
+              전기사용자용
+            </ul>
+            <li><a href="">전기사용현황</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('고객관리')">
+            <img src="../../img/Vector324.png" alt="" />
+            고객관리
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="고객관리-icon"
+              alt=""
+            />
+          </div>
+          <ul id="고객관리" class="submenu">
+            <ul>
+              고객센터
+            </ul>
+            <li><a href="">공지사항</a></li>
+            <li><a href="">자주 묻는 질문</a></li>
+            <li><a href="">유관기관 사이트</a></li>
+            <li><a href="">KT RDMS 소개</a></li>
+            <li><a href="">개인정보처리지침</a></li>
+            <li><a href="">서비스약관</a></li>
+            <ul>
+              고객정보(관리자)
+            </ul>
+            <li><a href="">전기사용자 정보관리</a></li>
+            <li><a href="">발전사업자 정보관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-item" onclick="toggleMenu('시스템설정')">
+            <img src="../../img/Vector325.png" alt="" />
+            시스템설정
+            <img
+              class="fas"
+              src="../../img/Vector_320.png"
+              id="시스템설정-icon"
+              alt=""
+            />
+          </div>
+          <ul id="시스템설정" class="submenu">
+            <ul>
+              시스템 관리(관리자)
+            </ul>
+            <li><a href="">사용자 그룹(SSO)</a></li>
+            <li><a href="">사용자 등록(SSO)</a></li>
+            <li><a href="">메뉴권한(SSO)</a></li>
+            <li><a href="">로그인 로그</a></li>
+            <li><a href="">시스템 로그</a></li>
+            <li><a href="">메뉴 로그</a></li>
+            <li><a href="">비상연락망 현황</a></li>
+            <li><a href="">비상연락망 등록</a></li>
+            <li><a href="">사용자권한신청조회(SSO)</a></li>
+            <li><a href="">사용자권한신청등록(SSO)</a></li>
+            <li><a href="">기준정보관리</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <!-- page header -->
+    <div class="page-header">
+      <h2>직접 PPA 서비스</h2>
+    </div>
+    <hr />
+    <div class="path">
+      <img src="../../img/home.svg" alt="" /> > 현황정보 > 대시보드 > 직접 PPA
+      서비스
+    </div>
+    <span class="right-details"
+      >탄소 중립과 RE100 달성을 위한 직접PPA 서비스를 제공합니다.</span
+    >
+
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div class="carousel-page" id="page-1">
+          <!-- First Page Content -->
+          <div class="page-content">
+            <!-- cover -->
+            <div class="backimg">
+              <img class="backtext" src="../../img/Rectangle463.png" alt="" />
+              <p class="covertext">
+                RE100 달성을 위한 재생에너지 직접 PPA 서비스를 제공합니다.
+              </p>
+            </div>
+            <!-- card-1 -->
+            <div class="Rectangle">
+              <div class="info-section">
+                <div class="info-item">
+                  <div class="info-title">직접 PPA 계약 발전소</div>
+                  <div class="info-value">
+                    <img src="../../img/powerplant_icon01.svg" alt="" /> 35
+                    <span>개</span>
+                  </div>
+                  <div class="info-title">재생에너지 발전량</div>
+                  <div class="info-value">
+                    <img src="../../img/hugeicons_energy-ellipse.svg" alt="" />
+                    000 <span>MWh</span>
+                  </div>
+                </div>
+              </div>
+              <div class="info-section">
+                <div class="info-item">
+                  <div class="info-title">직접 PPA 전기사용자수</div>
+                  <div class="info-value">
+                    <img src="../../img/powerplant_icon02.svg" alt="" /> 25
+                    <span>개</span>
+                  </div>
+                  <div class="info-title">재생에너지 공급량</div>
+                  <div class="info-value">
+                    <img src="../../img/hugeicons_energy-ellipse1.svg" alt="" />
+                    000 <span>MWH</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card-2 -->
+            <div class="rectangle1">
+              <div class="container1">
+                <p>즐겨찿기</p>
+                <div class="imagecard1">
+                  <img class="cardimage" src="../../img/Vector1.svg" alt="" />
+                  정보등록
+                </div>
+                <div class="imagecard1">
+                  <img class="cardimage" src="../../img/Vector2.svg" alt="" />
+                  발전사업자등록
+                </div>
+                <div class="imagecard1">
+                  <img class="cardimage" src="../../img/Vector7.svg" alt="" />
+                  전기사용자 등록
+                </div>
+                <div class="imagecard1">
+                  <img class="cardimage" src="../../img/Vector8.svg" alt="" />
+                  이용안내
+                </div>
+                <div class="imagecard1 row-2">
+                  <img class="cardimage" src="../../img/Vector9.svg" alt="" />
+                  정산관리
+                </div>
+                <div class="imagecard1">
+                  <img class="cardimage" src="../../img/Vector10.svg" alt="" />
+                  FAQ
+                </div>
+                <div class="imagecard1">
+                  <img class="cardimage" src="../../img/Vector11.svg" alt="" />
+                  공지사항
+                </div>
+              </div>
+            </div>
+            <!-- card-3 -->
+            <div class="rectangle">
+              <div class="container">
+                <div class="title1">
+                  공지사항
+                  <div>더보기 +</div>
+                </div>
+                <hr />
+              </div>
+              <div class="contents">
+                <span>
+                  2024년도 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항
+                  알림
+                  <span class="new">New</span>
+                  <span>2024.07.16</span>
+                </span>
+                <span>
+                  일반수소발전시장 입찰제안서 제출기한 연장 안내
+                  <span>2024.07.12</span>
+                </span>
+                <span>
+                  2024년도 청정수소발전시장 경쟁입찰 FAQ
+                  <span>2024.07.08</span>
+                </span>
+                <span>
+                  한국전력거래소 2025년도 연구개발과제 제안서 공모
+                  <span>2024.07.01</span>
+                </span>
+                <span>
+                  육지 후비 전력관제센터 건립공사 하도급공사 계약자료 공개
+                  <span>2024.06.13</span>
+                </span>
+              </div>
+            </div>
+            <!-- card-4 -->
+            <div class="slider-container">
+              <div class="slider-wrapper">
+                <div class="slide">
+                  <img src="../../img/image74.png" alt="Slide 1" />
+                </div>
+                <div class="slide">
+                  <img src="../../img/image71.png" alt="Slide 2" />
+                </div>
+                <div class="slide">
+                  <img src="../../img/STEP=3.png" alt="Slide 3" />
+                </div>
+              </div>
+              <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-page" id="page-2">
+          <!-- Second Page Content -->
+          <div class="page-content">
+            <div class="backimg-1">
+              <img class="backtext" src="../../img/Rectangle463.png" alt="" />
+              <p class="covertext">산업단지별 전력 거래 시세를 제공합니다.</p>
+            </div>
+            <!-- card 5 -->
+            <div class="Big-card">
+              <div class="card-container">
+                <h2>전력거래 대금 산정기준</h2>
+                <div class="card-position">
+                  <div class="card-header">
+                    <div class="card-title">
+                      <img src="../../img/octicon_file-added-24.svg" alt="" />
+                      부가정산금
+                    </div>
+                    <div class="cardvalue">
+                      <div class="card-value">
+                        9.63
+                        <div class="cardvalue1">원/kWh</div>
+                      </div>
+                      <div class="card-date">2024.07.01~2025.0.30</div>
+                    </div>
+                  </div>
+                  <div class="card-header">
+                    <div class="card-title">
+                      <img src="../../img/Vector3.svg" alt="" />
+                      거래수수료
+                    </div>
+                    <div class="cardvalue">
+                      <div class="card-value">
+                        0.1034
+                        <div class="cardvalue1">원/kWh</div>
+                      </div>
+                      <div class="card-date">2024.07.01~2025.0.30</div>
+                    </div>
+                  </div>
+                  <div class="card-header">
+                    <div class="card-title">
+                      <img src="../../img/Vector4.svg" alt="" />망 이용요금
+                    </div>
+                    <div class="cardvalue">
+                      <div class="card-value">
+                        평균 20
+                        <div class="cardvalue1">원/kWh</div>
+                      </div>
+                      <div class="card-date">망이용 계약 시 단가</div>
+                    </div>
+                  </div>
+                  <div class="card-header">
+                    <div class="card-title">
+                      <img src="../../img/Vector5.svg" alt="" />
+                      전력산업 기반기금
+                    </div>
+                    <div class="cardvalue">
+                      <div class="card-value">
+                        3.2
+                        <div class="cardvalue1">%</div>
+                      </div>
+                      <div class="card-date">2024.07.01~2025.0.30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="next-card">
+                <h2>
+                  산업단지별 전력 대금
+                  <div class="rightcard">
+                    <div class="rightcard-title">
+                      <img src="../../img/Vector6.svg" alt="" />
+                      인천 남동
+                    </div>
+                    <div class="rightcontent">
+                      <div class="rightvalue">전력공급대금</div>
+                      <div class="rightvalue1">
+                        평균
+                        <div class="rightvalue2">120</div>
+                        <div class="rightvalue3">원/kWh</div>
+                      </div>
+                    </div>
+                    <div class="rightcontent">
+                      <div class="rightvalue">전력거래대금</div>
+                      <div class="rightvalue1">
+                        평균
+                        <div class="rightvalue2">165</div>
+                        <div class="rightvalue3">원/kWh</div>
+                      </div>
+                    </div>
+                  </div>
+                </h2>
+                <div class="rightcard1">
+                  <div class="rightcard-title">
+                    <img src="../../img/Vector6.svg" alt="" />
+                    전남 군산
+                  </div>
+                  <div class="rightcontent">
+                    <div class="rightvalue">전력공급대금</div>
+                    <div class="rightvalue1">
+                      평균
+                      <div class="rightvalue2">125</div>
+                      <div class="rightvalue3">원/kWh</div>
+                    </div>
+                  </div>
+                  <div class="rightcontent">
+                    <div class="rightvalue">전력거래대금</div>
+                    <div class="rightvalue1">
+                      평균
+                      <div class="rightvalue2">170</div>
+                      <div class="rightvalue3">원/kWh</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rightcard2">
+                  <div class="rightcard-title">
+                    <img src="../../img/Vector6.svg" alt="" />
+                    광주 첨단
+                  </div>
+                  <div class="rightcontent">
+                    <div class="rightvalue">전력공급대금</div>
+                    <div class="rightvalue1">
+                      평균
+                      <div class="rightvalue2">126</div>
+                      <div class="rightvalue3">원/kWh</div>
+                    </div>
+                  </div>
+                  <div class="rightcontent">
+                    <div class="rightvalue">전력거래대금</div>
+                    <div class="rightvalue1">
+                      평균
+                      <div class="rightvalue2">171</div>
+                      <div class="rightvalue3">원/kWh</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-page" id="page-3">
+          <div class="page-content">
+            <!-- card 6 -->
+            <div class="backimg-2">
+              <img class="backtext" src="../../img/Rectangle463.png" alt="" />
+              <p class="covertext">산업단지별 전력 거래 시세를 제공합니다.</p>
+            </div>
+            <div class="main-container">
+              <div class="side-menu">
+                <div
+                  class="menu-item1 active"
+                  onclick="handleSideMenuClick('menu1')"
+                >
+                  <img src="../../img/mdi_industrial.svg" alt="" />
+                  인천 남동
+                </div>
+                <div class="menu-item1" onclick="handleSideMenuClick('menu2')">
+                  <img src="../../img/mdi_industrial.svg" alt="" />
+                  전남 군산
+                </div>
+                <div class="menu-item1" onclick="handleSideMenuClick('menu3')">
+                  <img src="../../img/mdi_industrial.svg" alt="" />
+                  광주 첨단
+                </div>
+              </div>
+
+              <!-- 탭 메뉴 -->
+              <div class="tab-container">
+                <div class="tabs">
+                  <div
+                    class="tab active"
+                    style="width: 260px; height: 48.01px"
+                    onclick="handleTabClick('전체')"
+                  >
+                    전체
+                  </div>
+                  <div
+                    class="tab"
+                    style="width: 260px; height: 48.01px"
+                    onclick="handleTabClick('최근 12개월')"
+                  >
+                    최근 12개월
+                  </div>
+                  <div
+                    class="tab"
+                    style="width: 260px; height: 48.01px"
+                    onclick="handleTabClick('최근 30일')"
+                  >
+                    최근 30일
+                  </div>
+                </div>
+
+                <!-- 각 탭에 맞는 내용 표시 -->
+                <div class="tab-content">
+                  <div class="line-arrow-container">
+                    <div class="line first"></div>
+                    <div class="arrow first-arrow"></div>
+                    <div class="line second"></div>
+                    <div class="arrow second-arrow"></div>
+                  </div>
+                  <div class="tabimg-container">
+                    <img class="tabimg" src="../../img/Group34853.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="../../img/Group34639.svg"
+        alt=""
+        class="carousel-control prev"
+        id="prev-btn"
+      />
+      <img
+        src="../../img/Group34640.png"
+        alt=""
+        class="carousel-control next"
+        id="next-btn"
+      />
+    </div>
+    <!-- cover -->
+
+    <!-- footer -->
+    <footer>
+      <div class="footer">Copyrightⓒ 0000 corp. All rights reserved.</div>
+    </footer>
+  </body>
+</html>

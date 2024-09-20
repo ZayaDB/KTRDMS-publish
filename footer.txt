@@ -1,0 +1,28 @@
+<footer>
+      <div class="footer">Copyrightⓒ 0000 corp. All rights reserved.</div>
+    </footer>
+
+
+css
+
+
+    .footer {
+  position: absolute;
+  margin: 0 auto;
+  height: 28px;
+  width: 86%;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  color: #808080;
+  border-top: 1px solid rgba(235, 235, 235, 1);
+  bottom: 0;
+  left: 260px;
+  background: rgba(245, 246, 250, 1);
+  padding: 0px 160px 0px 160px;
+}
