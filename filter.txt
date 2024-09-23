@@ -1,0 +1,60 @@
+/* filter */
+#value-select {
+  display: flex;
+  width: 104px;
+  height: 36px;
+  padding: 0px 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 3px;
+  border: 1px solid #d5d7dc;
+  background: #fff;
+}
+
+.filter {
+  position: absolute;
+  top: 154px;
+  left: 300px;
+  display: flex;
+  gap: 40px;
+}
+.filter-year {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filter-year select {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #808080;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 22.5px */
+}
+.fas1 {
+  margin-left: -36px;
+}
+.filter-year > label::after {
+  content: "*";
+  color: rgba(17, 152, 145, 1);
+  margin-left: 4px;
+}
+.search {
+  margin-left: 2px;
+}
+.submit-btn {
+  width: 86px;
+  height: 36px;
+  padding: 6px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 3px;
+  border: 1px solid #b3b3b3;
+  background: #fff;
+}
