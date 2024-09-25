@@ -1,40 +1,87 @@
-let activeMenu = null; // 현재 열려 있는 메뉴를 추적하는 변수
+// dropdown menu 및 클릭 시 아이콘 변경
 
-// 메뉴 열기/닫기 토글 함수
-function toggleMenu(menuName, path = null) {
+let activeMenu = null;
+
+function toggleMenu(menuName, element) {
   const menu = document.getElementById(menuName);
-  const icon = document.getElementById(menuName + "-icon");
+  const icon = element.querySelector("img:first-child");
+  const dropdownIcon = document.getElementById(menuName + "-icon");
 
-  // 다른 메뉴가 열려 있으면 닫기
   if (activeMenu && activeMenu !== menu) {
     activeMenu.style.display = "none";
-    const activeIcon = document.getElementById(activeMenu.id + "-icon");
+    const activeIcon =
+      activeMenu.previousElementSibling.querySelector("img:first-child");
+    const activeDropdownIcon = document.getElementById(activeMenu.id + "-icon");
+    if (activeDropdownIcon) {
+      activeDropdownIcon.classList.remove("rotate");
+    }
+
     if (activeIcon) {
-      activeIcon.classList.remove("rotate");
+      activeIcon.src = getInactiveIcon(activeMenu.id);
     }
   }
 
-  // 현재 메뉴를 열기 또는 닫기
   if (menu.style.display === "block") {
     menu.style.display = "none";
-    if (icon) icon.classList.remove("rotate");
-    activeMenu = null; // 활성화된 메뉴가 없음
+    if (dropdownIcon) dropdownIcon.classList.remove("rotate");
+    if (icon) icon.src = getInactiveIcon(menuName);
+    activeMenu = null;
   } else {
     menu.style.display = "block";
-    if (icon) icon.classList.add("rotate");
-    activeMenu = menu; // 새로 활성화된 메뉴 설정
+    if (dropdownIcon) dropdownIcon.classList.add("rotate");
+    if (icon) icon.src = getActiveIcon(menuName);
+    activeMenu = menu;
   }
 }
 
-// 페이지 로드 시 모든 메뉴를 닫는 초기화 함수
+function getActiveIcon(menuName) {
+  switch (menuName) {
+    case "현황정보":
+      return "../../img/replus_S모니터링icon1.png";
+    case "계약정보":
+      return "../../img/계약아이콘.png";
+    case "거래정산":
+      return "../../img/Vector322.png";
+    case "통계정보":
+      return "../../img/Group34795.png";
+    case "고객관리":
+      return "../../img/replus_S점검관리icon1.png";
+    case "시스템설정":
+      return "../../img/Group427319877.png";
+    default:
+      return "";
+  }
+}
+
+function getInactiveIcon(menuName) {
+  switch (menuName) {
+    case "현황정보":
+      return "../../img/ico-lnb01-w.svg";
+    case "계약정보":
+      return "../../img/Vector111.png";
+    case "거래정산":
+      return "../../img/Vector322.png";
+    case "통계정보":
+      return "../../img/Vector323.png";
+    case "고객관리":
+      return "../../img/ico-lnb04-w.svg";
+    case "시스템설정":
+      return "../../img/Vector325.png";
+
+    default:
+      return "";
+  }
+}
+
 window.onload = function () {
   const menus = document.querySelectorAll(".submenu");
 
-  // 모든 서브메뉴를 초기 상태로 설정 (메뉴 닫기)
   menus.forEach((menu) => {
     menu.style.display = "none";
   });
 };
+
+// Carousel Page
 
 document.addEventListener("DOMContentLoaded", function () {
   const carouselSlide = document.querySelector(".carousel-slide");
@@ -58,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Page 1 slide banner
+
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 let currentIndex = 0;
@@ -66,7 +115,6 @@ function showSlide(index) {
   const sliderWrapper = document.querySelector(".slider-wrapper");
   sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
 
-  // 활성화된 점 업데이트
   dots.forEach((dot) => dot.classList.remove("active"));
   dots[index].classList.add("active");
 }
@@ -76,12 +124,12 @@ function goToSlide(index) {
   showSlide(index);
 }
 
-// 3초마다 슬라이드 전환
 setInterval(() => {
   currentIndex = (currentIndex + 1) % slides.length;
   showSlide(currentIndex);
 }, 3000);
 
+// Page 3 tab 기능
 let activeSideMenu = "menu1";
 let activeTab = "전체";
 
@@ -104,15 +152,25 @@ function handleSideMenuClick(menu) {
 
 function handleTabClick(tab) {
   activeTab = tab;
+
   document.querySelectorAll(".tab").forEach((tabItem) => {
     tabItem.classList.remove("active");
   });
+
   document
     .querySelector(`.tab[onclick="handleTabClick('${tab}')"]`)
     .classList.add("active");
 
+  document.querySelectorAll(".tab-content-item").forEach((contentItem) => {
+    contentItem.classList.remove("active");
+  });
+
+  document
+    .getElementById(`tab-${tab.replace(/\s/g, "")}`)
+    .classList.add("active");
+
   const tabImg = document.querySelector(".tabimg");
   if (tab === "전체" || tab === "최근 12개월" || tab === "최근 30일") {
-    tabImg.src = "assets/Group34853.svg";
+    tabImg.src = "../../img/Group34853.png";
   }
 }
