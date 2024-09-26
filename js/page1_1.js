@@ -41,7 +41,7 @@ function getActiveIcon(menuName) {
     case "계약정보":
       return "../../img/계약아이콘.png";
     case "거래정산":
-      return "../../img/Vector322.png";
+      return "../../img/Group427319881.svg";
     case "통계정보":
       return "../../img/Group34795.png";
     case "고객관리":

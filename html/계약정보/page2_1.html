@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/page2_1.css" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <script defer src="../js/page2_1.js"></script>
+    <link rel="stylesheet" href="../../css/page2_1.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <script defer src="../../js/page2_1.js"></script>
     <title>Document</title>
   </head>
   <!-- Header -->
   <header>
-    <a href="#" class="logo-text">
-      <img src="../img/img_logo.png " alt="Logo" class="logo" />
+    <a href="../현황정보/page1_1.html" class="logo-text">
+      <img src="../../img/logo_copy.png" alt="Logo" class="logo" />
+      <div class="mSel1 jsSelect1">
+        <button type="button" class="sel fs24" disabled="disabled">RDMS</button>
+        <div class="selList" style="display: none"></div>
+      </div>
     </a>
     <div class="weather-user-section">
       <div class="REC-PPA">
@@ -24,31 +28,32 @@
         </div>
         <div class="PPA">
           PPA 정보
-          <div class="price">135.69</div>
+          <div class="AVG">
+            평균
+            <div class="price">135.69</div>
+          </div>
         </div>
       </div>
       <div class="weather">
         <span class="location-weather">
           인천남동 산업단지
-          <img src="../img/sun.png" alt="" />
+          <img src="../../img/sun.png" alt="" />
           <span class="Gradus"> 26°C</span>
         </span>
-        <img src="../img/umbrella.png" alt="" />
+        <img src="../../img/umbrella.png" alt="" />
         <span> 20%</span>
-        <img src="../img/water.png" alt="" />
+        <img src="../../img/water.png" alt="" />
         <span>25%</span>
-        <img src="../img/wind.png" alt="" />
+        <img src="../../img/wind.png" alt="" />
         <span>16m/s</span>
       </div>
       <div class="user-info">
-        <img src="../img/bell1.png" alt="" />
-        <span class="bold">알림</span>
-        <span class="notif">3</span>
-        <img src="../img/SortDown.png" alt="" />
-        <img class="user-icon" src="../img/Sample_User_Icon.png" alt="" />
-        <span class="bold">홍길동</span>
-        <span>관리자</span>
-        <img src="../img/SortDown.png" alt="" />
+        <img src="../../img/cursor.png" alt="" />
+        <span class="bold">주식회사 ○○</span>
+        <span class="notif"></span>
+        <span class="bold">마스터</span>
+        <span class="notif"></span>
+        <span class="bold">홍길*(hong***)님</span>
       </div>
     </div>
   </header>
@@ -57,12 +62,12 @@
     <aside class="sidebar">
       <ul class="menu">
         <li>
-          <div class="menu-item" onclick="toggleMenu('현황정보')">
-            <img src="../img/Frame_6340902.png" alt="" />
+          <div class="menu-item" onclick="toggleMenu('현황정보',this)">
+            <img id="icon1" src="../../img/ico-lnb01-w.svg" alt="" />
             현황정보
             <img
               class="fas"
-              src="../img/Vector_320.png"
+              src="../../img/Vector_320.png"
               id="현황정보-icon"
               alt=""
             />
@@ -72,30 +77,22 @@
               대시보드
             </ul>
             <li>
-              <a
-                href="../html/현황정보/page1_1.html"
-                onclick="updateBreadcrumb('현황정보 > 대시보드')"
-                >직접 PPA 서비스</a
-              >
+              <a href="../현황정보/page1_1.html">직접 PPA 서비스</a>
             </li>
             <li>
-              <a
-                href="../html/현황정보/page1_2.html"
-                onclick="updateBreadcrumb('현황정보 > 대시보드')"
-                >전국 발전소 현황</a
-              >
+              <a href="../../html/현황정보/page1_2.html">전국 발전소 현황</a>
             </li>
             <li><a href="../index.jsp">직접 PPA 계약 현황</a></li>
             <li><a href="">실시간 공급-수요 현황</a></li>
           </ul>
         </li>
         <li>
-          <div class="menu-item" onclick="toggleMenu('계약정보')">
-            <img src="../img/Vector321.png" alt="" />
+          <div class="menu-item" onclick="toggleMenu('계약정보',this)">
+            <img src="../../img/Vector111.png" alt="" />
             계약정보
             <img
               class="fas"
-              src="../img/Vector_320.png"
+              src="../../img/Vector_320.png"
               id="계약정보-icon"
               alt=""
             />
@@ -104,7 +101,7 @@
             <ul>
               전력거래 매물
             </ul>
-            <li><a href="">전력거래 매물 현황</a></li>
+            <li><a href="../계약정보/page2_1.html">전력거래 매물 현황</a></li>
             <li><a href="">전력 판매 정보</a></li>
             <li><a href="">전력 구매 정보</a></li>
             <li><a href="">계약 단계별 진행현황</a></li>
@@ -118,12 +115,12 @@
           </ul>
         </li>
         <li>
-          <div class="menu-item" onclick="toggleMenu('거래정산')">
-            <img src="../img/Vector322.png" alt="" />
+          <div class="menu-item" onclick="toggleMenu('거래정산',this)">
+            <img src="../../img/Vector322.png" alt="" />
             거래정산
             <img
               class="fas"
-              src="../img/Vector_320.png"
+              src="../../img/Vector_320.png"
               id="계약정보-icon"
               alt=""
             />
@@ -148,12 +145,12 @@
           </ul>
         </li>
         <li>
-          <div class="menu-item" onclick="toggleMenu('통계정보')">
-            <img src="../img/Vector323.png" alt="" />
+          <div class="menu-item" onclick="toggleMenu('통계정보',this)">
+            <img src="../../img/Vector323.png" alt="" />
             통계정보
             <img
               class="fas"
-              src="../img/Vector_320.png"
+              src="../../img/Vector_320.png"
               id="통계정보-icon"
               alt=""
             />
@@ -182,12 +179,12 @@
           </ul>
         </li>
         <li>
-          <div class="menu-item" onclick="toggleMenu('고객관리')">
-            <img src="../img/Vector324.png" alt="" />
+          <div class="menu-item" onclick="toggleMenu('고객관리',this)">
+            <img src="../../img/ico-lnb04-w.svg" alt="" />
             고객관리
             <img
               class="fas"
-              src="../img/Vector_320.png"
+              src="../../img/Vector_320.png"
               id="고객관리-icon"
               alt=""
             />
@@ -210,12 +207,12 @@
           </ul>
         </li>
         <li>
-          <div class="menu-item" onclick="toggleMenu('시스템설정')">
-            <img src="../img/Vector325.png" alt="" />
+          <div class="menu-item" onclick="toggleMenu('시스템설정',this)">
+            <img src="../../img/Vector325.png" alt="" />
             시스템설정
             <img
               class="fas"
-              src="../img/Vector_320.png"
+              src="../../img/Vector_320.png"
               id="시스템설정-icon"
               alt=""
             />
@@ -247,8 +244,8 @@
     </div>
     <hr />
     <div class="path">
-      <img src="../img/home.svg" alt="" /> > 계약정보 > 전력거래 매물 > 전력거래
-      매물 현황
+      <img src="../../img/home.svg" alt="" /> > 계약정보 > 전력거래 매물 >
+      전력거래 매물 현황
     </div>
     <span class="right-details"
       >재생에너지 판매/구매 매물 현황을 보여줍니다.</span
@@ -257,7 +254,7 @@
     <!-- 필터 -->
     <div class="filter">
       <div class="filter-year">
-        <img src="../img/Group34798.svg" alt="" />
+        <img src="../../img/Group34798.svg" alt="" />
         <label class="required" for="title-input">연도</label>
         <select id="value-select">
           <option value="2024">2024</option>
@@ -265,34 +262,34 @@
           <option value="2022">2022</option>
           <option value="2021">2021</option>
         </select>
-        <img class="fas1" src="../img/Vector249.svg" alt="" />
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
       </div>
       <div class="filter-year">
-        <img src="../img/filter-Vector.svg" alt="" />
+        <img src="../../img/filter-Vector.svg" alt="" />
         <label for="title-input">산업단지</label>
         <select id="value-select">
           <option value="2024">인천남동</option>
         </select>
-        <img class="fas1" src="../img/Vector249.svg" alt="" />
-        <img class="search" src="../img/search.png" alt="" />
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+        <img class="search" src="../../img/search.png" alt="" />
       </div>
       <div class="filter-year">
-        <img src="../img/powerplant_icon012.svg " alt="" />
+        <img src="../../img/powerplant_icon012.svg " alt="" />
         <label for="title-input">발전사업자</label>
         <select id="value-select">
           <option value="2024">전체</option>
         </select>
-        <img class="fas1" src="../img/Vector249.svg" alt="" />
-        <img class="search" src="../img/search.png" alt="" />
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+        <img class="search" src="../../img/search.png" alt="" />
       </div>
       <div class="filter-year">
-        <img src="../img/powerplant_icon012.svg" alt="" />
+        <img src="../../img/powerplant_icon012.svg" alt="" />
         <label for="title-input">전기사용자</label>
         <select id="value-select">
           <option value="2024">전체</option>
         </select>
-        <img class="fas1" src="../img/Vector249.svg" alt="" />
-        <img class="search" src="../img/search.png" alt="" />
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+        <img class="search" src="../../img/search.png" alt="" />
       </div>
       <button class="submit-btn">조회</button>
     </div>
@@ -303,13 +300,13 @@
       <div class="leftright411">
         <div class="container-411-left">
           <span class="value-411">
-            <img src="../img/Vector411.svg" alt="" />예상 전력거래단가</span
+            <img src="../../img/Vector411.svg" alt="" />예상 전력거래단가</span
           >
           <span>175<span class="unit">원/kWh</span></span>
         </div>
         <div class="container-411-right">
           <span class="value-411">
-            <img src="../img/Vector411.svg" alt="" />공급단가</span
+            <img src="../../img/Vector411.svg" alt="" />공급단가</span
           >
           <span>175 <span class="unit">원/kWh</span></span>
         </div>
@@ -330,7 +327,7 @@
           </div>
         </div>
         <div class="price-graph">
-          <img src="../img/Group427319802.png" alt="" />
+          <img src="../../img/Group427319802.png" alt="" />
         </div>
       </div>
     </div>
@@ -348,7 +345,7 @@
           </div>
         </div>
         <div class="price-graph">
-          <img src="../img/Group34722.png" alt="" />
+          <img src="../../img/Group34722.png" alt="" />
         </div>
       </div>
     </div>

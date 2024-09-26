@@ -1,82 +1,31 @@
-/* page cover image */
-.backimg {
-  position: absolute;
-  top: 143px;
-  right: 38px;
-  width: 1580px;
-}
-.backimg-1 {
-  position: relative;
-  top: 143px;
-  left: 40px;
-  width: 1580px;
-}
-.backimg-2 {
-  position: relative;
-  top: 143px;
-  left: 40px;
-  width: 1580px;
-}
-.backtext {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  color: #4d4d4d;
-  width: 1580px;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.backtext p {
-  z-index: 10;
-}
-.covertext {
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(77, 77, 77, 1);
-  position: absolute;
-  top: 88px;
-  left: 566px;
-}
-
 /* carousel css */
 .carousel-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 1645px;
-  max-height: 1080px;
+  position: relative;
+  top: 64px;
+  left: 260px;
+  width: 1660px;
+  height: 1016px;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
 }
-
 .carousel-slide {
   display: flex;
   transition: transform 0.6s ease-in-out;
 }
-
 .carousel-page {
   min-width: 100%;
-  max-height: 1080px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 .page-content {
-  width: 100%;
-  height: 100%;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
 }
 .carousel-control {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -90,22 +39,52 @@
 }
 
 .carousel-control.prev {
-  left: -12px;
+  left: 260px;
 }
 
 .carousel-control.next {
   right: 0;
 }
 /* carousel */
-/* card 1 */
+/* page cover image */
+.backimg {
+  position: absolute;
+  top: 91px;
+  left: 40px;
+  width: 1588px;
+  height: 196px;
+}
+.backimg-1 {
+  position: relative;
+  top: 91px;
+  left: 0px;
+  width: 1588px;
+  height: 196px;
+}
+.backimg-2 {
+  position: relative;
+  top: 91px;
+  left: 0px;
+  width: 1588px;
+  height: 196px;
+}
+.covertext {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(77, 77, 77, 1);
+  position: absolute;
+  top: 88px;
+  left: 566px;
+}
+/* card 1 직접 PPA 계약 발전소 */
 .Rectangle {
   position: absolute;
   width: 775px;
   height: 360px;
   border-radius: 12px;
   background: linear-gradient(286.66deg, #e9f5ff 4.32%, #c7dff4 94.53%);
-  top: 369px;
-  left: 30px;
+  top: 306px;
+  left: 40px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.06);
   display: flex;
   justify-content: space-around;
@@ -153,7 +132,7 @@
 }
 
 /* card1 */
-/* card2 */
+/* card2  즐겨찾기*/
 .rectangle1 {
   width: 775px;
   height: 360px;
@@ -162,8 +141,8 @@
   border: 1px solid rgba(199, 223, 244, 1);
   position: absolute;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.06);
-  top: 369px;
-  right: 40px;
+  top: 306px;
+  right: 32px;
 }
 .rectangle1 p {
   display: flex;
@@ -207,13 +186,13 @@
 }
 
 /* card2 */
-/* card3 */
+/* card3  공지사항*/
 .rectangle {
   width: 775px;
   height: 262px;
   position: absolute;
-  top: 759px;
-  left: 30px;
+  top: 695px;
+  left: 40px;
   border-radius: 12px;
   border: 1px solid rgba(234, 235, 237, 1);
   background: rgba(255, 255, 255, 1);
@@ -237,10 +216,12 @@
   line-height: 16.71px;
   text-align: right;
 }
-/* hr {
+.container > hr {
+  width: 716px;
+  margin: 0 auto;
   margin-top: 16px;
   border: 1px solid rgba(232, 232, 236, 1);
-} */
+}
 .contents span {
   margin-top: 20px;
   display: flex;
@@ -272,7 +253,7 @@
   margin-right: 100px !important;
 }
 /* card3 end */
-/* card4 */
+/* card4  이미지 슬라이드*/
 .slider-container {
   width: 775px;
   height: 262px;
@@ -280,8 +261,8 @@
   border-radius: 12px;
   opacity: 0px;
   position: absolute;
-  top: 759px;
-  right: 40px;
+  top: 695px;
+  right: 32px;
   overflow: hidden;
   margin: auto;
 }
@@ -309,12 +290,12 @@
 }
 /* card4 end*/
 
-/* card5 css */
+/* card5 전력거래 대금 산정기준 css */
 .Big-card {
   width: 1585px;
   height: 640px;
-  top: 172px;
-  left: 40px;
+  top: 122px;
+  left: 0;
   border-radius: 12px;
   box-shadow: 5px 8px 20px 10px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(232, 231, 231, 1);
@@ -481,8 +462,8 @@
   width: 1580px;
   height: 640px;
   position: relative;
-  top: 172px;
-  left: 40px;
+  top: 122px;
+  left: 0;
   gap: 0px;
   border-radius: 12px;
   border: 1px solid rgba(232, 231, 231, 1);
@@ -540,8 +521,7 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.menu-item1.active img,
-.menu-item1:hover img {
+.menu-item1.active img {
   filter: brightness(0) saturate(100%) invert(100%);
 }
 .menu-item1.active {

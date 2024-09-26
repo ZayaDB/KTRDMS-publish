@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="../../css/index.css" />
     <script defer src="../../js/page1_1.js"></script>
   </head>
-  <!-- header -->
+  <!-- header GNB -->
   <header>
-    <a href="#" class="logo-text">
-      <img src="../../img/img_logo.png " alt="Logo" class="logo" />
+    <a href="../현황정보/page1_1.html" class="logo-text">
+      <img src="../../img/logo_copy.png" alt="Logo" class="logo" />
+      <div class="mSel1 jsSelect1">
+        <button type="button" class="sel fs24" disabled="disabled">RDMS</button>
+        <div class="selList" style="display: none"></div>
+      </div>
     </a>
     <div class="weather-user-section">
       <div class="REC-PPA">
@@ -54,7 +58,7 @@
     </div>
   </header>
   <body>
-    <!-- sidemenu -->
+    <!-- sidemenu LNB -->
     <aside class="sidebar">
       <ul class="menu">
         <li>
@@ -68,6 +72,7 @@
               alt=""
             />
           </div>
+
           <ul id="현황정보" class="submenu">
             <ul>
               대시보드
@@ -81,6 +86,7 @@
             <li><a href="../index.jsp">직접 PPA 계약 현황</a></li>
             <li><a href="">실시간 공급-수요 현황</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('계약정보',this)">
@@ -93,11 +99,12 @@
               alt=""
             />
           </div>
+
           <ul id="계약정보" class="submenu">
             <ul>
               전력거래 매물
             </ul>
-            <li><a href="../page2_1.html">전력거래 매물 현황</a></li>
+            <li><a href="../계약정보/page2_1.html">전력거래 매물 현황</a></li>
             <li><a href="">전력 판매 정보</a></li>
             <li><a href="">전력 구매 정보</a></li>
             <li><a href="">계약 단계별 진행현황</a></li>
@@ -109,6 +116,7 @@
             <li><a href="">계약목록</a></li>
             <li><a href="">최종계약목록(거래유형)</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('거래정산',this)">
@@ -121,6 +129,7 @@
               alt=""
             />
           </div>
+
           <ul id="거래정산" class="submenu">
             <ul>
               청구/정산
@@ -139,6 +148,7 @@
             <li><a href="">청구자료 등록</a></li>
             <li><a href="">한전 데이터 관리</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('통계정보',this)">
@@ -151,6 +161,7 @@
               alt=""
             />
           </div>
+
           <ul id="통계정보" class="submenu">
             <ul>
               한국산업단지 전용
@@ -173,6 +184,7 @@
             </ul>
             <li><a href="">전기사용현황</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('고객관리',this)">
@@ -185,6 +197,7 @@
               alt=""
             />
           </div>
+
           <ul id="고객관리" class="submenu">
             <ul>
               고객센터
@@ -201,6 +214,7 @@
             <li><a href="">전기사용자 정보관리</a></li>
             <li><a href="">발전사업자 정보관리</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('시스템설정',this)">
@@ -213,6 +227,7 @@
               alt=""
             />
           </div>
+
           <ul id="시스템설정" class="submenu">
             <ul>
               시스템 관리(관리자)
@@ -232,21 +247,23 @@
         </li>
       </ul>
     </aside>
-    <!-- page header -->
+    <!-- page 제묵 -->
     <div class="page-header">
       <h2>직접 PPA 서비스</h2>
     </div>
-    <hr />
+    <!-- page 경로 -->
     <div class="path">
       <img src="../../img/home.svg" alt="" /> > 현황정보 > 대시보드 > 직접 PPA
       서비스
     </div>
+    <!-- page 정보 -->
     <span class="right-details"
       >탄소 중립과 RE100 달성을 위한 직접PPA 서비스를 제공합니다.</span
     >
-
+    <!--carousel -->
     <div class="carousel-container">
       <div class="carousel-slide">
+        <!-- 메인 페이지-1 -->
         <div class="carousel-page" id="page-1">
           <!-- First Page Content -->
           <div class="page-content">
@@ -257,7 +274,7 @@
                 RE100 달성을 위한 재생에너지 직접 PPA 서비스를 제공합니다.
               </p>
             </div>
-            <!-- card-1 -->
+            <!-- card-1  직접 PPA 계약 발전소-->
             <div class="Rectangle">
               <div class="info-section">
                 <div class="info-item">
@@ -288,7 +305,7 @@
                 </div>
               </div>
             </div>
-            <!-- card-2 -->
+            <!-- card-2 즐겨찿기 -->
             <div class="rectangle1">
               <p>즐겨찾기</p>
               <div class="container1">
@@ -323,7 +340,7 @@
                 </div>
               </div>
             </div>
-            <!-- card-3 -->
+            <!-- card-3 공지사항 -->
             <div class="rectangle">
               <div class="container">
                 <div class="title1">
@@ -357,7 +374,7 @@
                 </span>
               </div>
             </div>
-            <!-- card-4 -->
+            <!-- card-4 이미지 슬라이드 -->
             <div class="slider-container">
               <div class="slider-wrapper">
                 <div class="slide">
@@ -378,14 +395,16 @@
             </div>
           </div>
         </div>
+        <!-- 메인 페이지-2 -->
         <div class="carousel-page" id="page-2">
           <!-- Second Page Content -->
           <div class="page-content">
+            <!-- cover 이미지-->
             <div class="backimg-1">
               <img class="backtext" src="../../img/Rectangle463.png" alt="" />
               <p class="covertext">산업단지별 전력 거래 시세를 제공합니다.</p>
             </div>
-            <!-- card 5 -->
+            <!-- card 5 전력거래 대금 산정기준-->
             <div class="Big-card">
               <div class="card-container">
                 <h2>전력거래 대금 산정기준</h2>
@@ -517,7 +536,7 @@
             </div>
           </div>
         </div>
-
+        <!-- 메인 페이지-3 -->
         <div class="carousel-page" id="page-3">
           <div class="page-content">
             <!-- card 6 -->
@@ -588,7 +607,7 @@
           </div>
         </div>
       </div>
-
+      <!-- 오른쭉 왼쭉 arrow -->
       <img
         src="../../img/Group34639.svg"
         alt=""
@@ -602,7 +621,6 @@
         id="next-btn"
       />
     </div>
-    <!-- cover -->
 
     <!-- footer -->
     <footer>
