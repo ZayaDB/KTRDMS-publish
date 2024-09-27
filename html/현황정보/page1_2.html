@@ -8,57 +8,64 @@
     <link rel="stylesheet" href="../../css/index.css" />
     <script src="../../js/page1_1.js"></script>
   </head>
-  <header>
-    <a href="#" class="logo-text">
-      <img src="../../img/img_logo.png " alt="Logo" class="logo" />
-    </a>
-    <div class="weather-user-section">
-      <div class="REC-PPA">
-        <div class="REC">
-          REC 정보
-          <div class="AVG">
-            평균
-            <div class="price-1">74,949</div>
-          </div>
-        </div>
-        <div class="PPA">
-          PPA 정보
-          <div class="AVG">
-            평균
-            <div class="price">135.69</div>
-          </div>
-        </div>
-      </div>
-      <div class="weather">
-        <span class="location-weather">
-          인천남동 산업단지
-          <img src="../../img/sun.png" alt="" />
-          <span class="Gradus"> 26°C</span>
-        </span>
-        <img src="../../img/umbrella.png" alt="" />
-        <span> 20%</span>
-        <img src="../../img/water.png" alt="" />
-        <span>25%</span>
-        <img src="../../img/wind.png" alt="" />
-        <span>16m/s</span>
-      </div>
-      <div class="user-info">
-        <img src="../../img/cursor.png" alt="" />
-        <span class="bold">주식회사 ○○</span>
-        <span class="notif"></span>
-        <span class="bold">마스터</span>
-        <span class="notif"></span>
-        <span class="bold">홍길*(hong***)님</span>
-      </div>
-    </div>
-  </header>
+
   <body>
-    <!-- sidemenu -->
+    <header>
+      <a href="../현황정보/page1_1.html" class="logo-text">
+        <img src="../../img/logo_copy.png" alt="Logo" class="logo" />
+        <div class="mSel1 jsSelect1">
+          <button type="button" class="sel fs24" disabled="disabled">
+            RDMS
+          </button>
+          <div class="selList" style="display: none"></div>
+        </div>
+      </a>
+      <div class="weather-user-section">
+        <div class="REC-PPA">
+          <div class="REC">
+            REC 정보
+            <div class="AVG">
+              평균
+              <div class="price-1">74,949</div>
+            </div>
+          </div>
+          <div class="PPA">
+            PPA 정보
+            <div class="AVG">
+              평균
+              <div class="price">135.69</div>
+            </div>
+          </div>
+        </div>
+        <div class="weather">
+          <span class="location-weather">
+            인천남동 산업단지
+            <img src="../../img/sun.png" alt="" />
+            <span class="Gradus"> 26°C</span>
+          </span>
+          <img src="../../img/umbrella.png" alt="" />
+          <span> 20%</span>
+          <img src="../../img/water.png" alt="" />
+          <span>25%</span>
+          <img src="../../img/wind.png" alt="" />
+          <span>16m/s</span>
+        </div>
+        <div class="user-info">
+          <img src="../../img/cursor.png" alt="" />
+          <span class="bold">주식회사 ○○</span>
+          <span class="notif"></span>
+          <span class="bold">마스터</span>
+          <span class="notif"></span>
+          <span class="bold">홍길*(hong***)님</span>
+        </div>
+      </div>
+    </header>
+    <!-- sidemenu LNB -->
     <aside class="sidebar">
       <ul class="menu">
         <li>
           <div class="menu-item" onclick="toggleMenu('현황정보',this)">
-            <img src="../../img/Frame_6340902.png" alt="" />
+            <img id="icon1" src="../../img/ico-lnb01-w.svg" alt="" />
             현황정보
             <img
               class="fas"
@@ -67,6 +74,7 @@
               alt=""
             />
           </div>
+
           <ul id="현황정보" class="submenu">
             <ul>
               대시보드
@@ -75,15 +83,16 @@
               <a href="../현황정보/page1_1.html">직접 PPA 서비스</a>
             </li>
             <li>
-              <a href="../../html/현황정보/page1_2.html">전국 발전소 현황</a>
+              <a href="#">전국 발전소 현황</a>
             </li>
-            <li><a href="../현황정보/page1_3.html">직접 PPA 계약 현황</a></li>
+            <li><a href="../index.jsp">직접 PPA 계약 현황</a></li>
             <li><a href="">실시간 공급-수요 현황</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('계약정보',this)">
-            <img src="../../img/Vector321.png" alt="" />
+            <img src="../../img/Vector111.png" alt="" />
             계약정보
             <img
               class="fas"
@@ -92,11 +101,12 @@
               alt=""
             />
           </div>
+
           <ul id="계약정보" class="submenu">
             <ul>
               전력거래 매물
             </ul>
-            <li><a href="../page2_1.html">전력거래 매물 현황</a></li>
+            <li><a href="../계약정보/page2_1.html">전력거래 매물 현황</a></li>
             <li><a href="">전력 판매 정보</a></li>
             <li><a href="">전력 구매 정보</a></li>
             <li><a href="">계약 단계별 진행현황</a></li>
@@ -108,6 +118,7 @@
             <li><a href="">계약목록</a></li>
             <li><a href="">최종계약목록(거래유형)</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('거래정산',this)">
@@ -120,6 +131,7 @@
               alt=""
             />
           </div>
+
           <ul id="거래정산" class="submenu">
             <ul>
               청구/정산
@@ -138,6 +150,7 @@
             <li><a href="">청구자료 등록</a></li>
             <li><a href="">한전 데이터 관리</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('통계정보',this)">
@@ -150,6 +163,7 @@
               alt=""
             />
           </div>
+
           <ul id="통계정보" class="submenu">
             <ul>
               한국산업단지 전용
@@ -172,10 +186,11 @@
             </ul>
             <li><a href="">전기사용현황</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('고객관리',this)">
-            <img src="../../img/Vector324.png" alt="" />
+            <img src="../../img/ico-lnb04-w.svg" alt="" />
             고객관리
             <img
               class="fas"
@@ -184,6 +199,7 @@
               alt=""
             />
           </div>
+
           <ul id="고객관리" class="submenu">
             <ul>
               고객센터
@@ -200,6 +216,7 @@
             <li><a href="">전기사용자 정보관리</a></li>
             <li><a href="">발전사업자 정보관리</a></li>
           </ul>
+          <hr />
         </li>
         <li>
           <div class="menu-item" onclick="toggleMenu('시스템설정',this)">
@@ -212,6 +229,7 @@
               alt=""
             />
           </div>
+
           <ul id="시스템설정" class="submenu">
             <ul>
               시스템 관리(관리자)
@@ -231,7 +249,6 @@
         </li>
       </ul>
     </aside>
-
     <div class="page-header">
       <h2>전국 발전소 현황</h2>
     </div>
@@ -243,177 +260,182 @@
     <span class="right-details"
       >직접 PPA 전력거래를 하는 전국재생에너지 발전소 현황을 보여줍니다.</span
     >
-    <div class="container">
-      <!-- Weather Section -->
-      <div class="weather-info">
-        <div class="weather-head">
-          <h2>날씨정보</h2>
-          <div>2024.07.24 10:00 기준</div>
-        </div>
-        <div class="weather-main">
-          <div class="weather-header">
-            <img src="../../img/sunw.png" alt="날씨 이미지" width="50" />
-            <!-- Weather Image -->
-            <div>26°C</div>
+    <div class="main">
+      <div class="container">
+        <!-- Weather Section -->
+        <div class="weather-info">
+          <div class="weather-head">
+            <h2>날씨정보</h2>
+            <div>2024.07.24 10:00 기준</div>
           </div>
+          <div class="weather-main">
+            <div class="weather-header">
+              <img src="../../img/sunw.png" alt="날씨 이미지" width="50" />
+              <!-- Weather Image -->
+              <div>26°C</div>
+            </div>
 
-          <div class="sunset">
-            <img src="../../img/mingcute_sunrise-line.svg" alt="" />인출 05:49
+            <div class="sunset">
+              <img src="../../img/mingcute_sunrise-line.svg" alt="" />인출 05:49
 
-            <img src="../../img/mingcute_sunset-line.svg" alt="" />일몰 05:49
+              <img src="../../img/mingcute_sunset-line.svg" alt="" />일몰 05:49
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <div>
+              <div class="detailsvalue">
+                <img src="../../img/Group34653.svg" alt="" />풍속
+              </div>
+              <div class="detailsnumb">16 m/s</div>
+            </div>
+            <div class="line"></div>
+            <div>
+              <div class="detailsvalue">
+                <img src="../../img/Group34653.svg" alt="" />습도
+              </div>
+              <div class="detailsnumb">16 %</div>
+            </div>
+            <div class="line2"></div>
+            <div>
+              <div class="detailsvalue">
+                <img
+                  src="../../img/fluent_dust-20-regular.svg"
+                  alt=""
+                />미세먼지
+              </div>
+              <div class="detailsnumb">16 μg/m³</div>
+            </div>
           </div>
         </div>
-        <hr />
-        <div class="details">
-          <div>
-            <div class="detailsvalue">
-              <img src="../../img/Group34653.svg" alt="" />풍속
+
+        <!-- National Energy Section -->
+        <div class="national-info">
+          <h2>전국</h2>
+          <div class="national-data">
+            <div>
+              <div class="righttitle">재생에너지 발전소</div>
+              <div class="large-number">
+                <img src="../../img/powerplant_icon01.svg" alt="" />25
+                <div class="info-item">개소</div>
+              </div>
             </div>
-            <div class="detailsnumb">16 m/s</div>
-          </div>
-          <div class="line"></div>
-          <div>
-            <div class="detailsvalue">
-              <img src="../../img/Group34653.svg" alt="" />습도
+            <div>
+              <div class="righttitle">발전소 설비용량</div>
+              <div class="large-number">
+                200
+                <div class="info-item">kW</div>
+              </div>
             </div>
-            <div class="detailsnumb">16 %</div>
-          </div>
-          <div class="line2"></div>
-          <div>
-            <div class="detailsvalue">
-              <img src="../../img/fluent_dust-20-regular.svg" alt="" />미세먼지
+
+            <div class="info-item">
+              <div class="righttitle">전기사용자</div>
+              <div class="large-number">
+                <img src="../../img/powerplant_icon02.svg" alt="" />25
+                <div class="info-item">개소</div>
+              </div>
             </div>
-            <div class="detailsnumb">16 μg/m³</div>
+            <div>
+              <div class="righttitle">재생에너지 발전량</div>
+              <div class="large-number">
+                7,500
+                <div class="info-item">MWh</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- National Energy Section -->
-      <div class="national-info">
-        <h2>전국</h2>
-        <div class="national-data">
-          <div>
-            <div class="righttitle">재생에너지 발전소</div>
-            <div class="large-number">
-              <img src="../../img/powerplant_icon01.svg" alt="" />25
-              <div class="info-item">개소</div>
-            </div>
-          </div>
-          <div>
-            <div class="righttitle">발전소 설비용량</div>
-            <div class="large-number">
-              200
-              <div class="info-item">kW</div>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="righttitle">전기사용자</div>
-            <div class="large-number">
-              <img src="../../img/powerplant_icon02.svg" alt="" />25
-              <div class="info-item">개소</div>
-            </div>
-          </div>
-          <div>
-            <div class="righttitle">재생에너지 발전량</div>
-            <div class="large-number">
-              7,500
-              <div class="info-item">MWh</div>
-            </div>
-          </div>
-        </div>
+      <div class="map">
+        <img src="../../img/Group34855.png" alt="" />
       </div>
-    </div>
-    <div class="map">
-      <img src="../../img/Group34855.png" alt="" />
-    </div>
-    <div class="middle-container">
-      <h2>발전/공급 통계</h2>
-      <div class="middle-content">
-        <div class="content-card">
-          <div class="card-head">
-            <span>당월</span>
-            <span>+</span>
+      <div class="middle-container">
+        <h2>발전/공급 통계</h2>
+        <div class="middle-content">
+          <div class="content-card">
+            <div class="card-head">
+              <span>당월</span>
+              <span>+</span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                발전량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                공급량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
           </div>
-          <div class="card-details-top">
-            <span>
-              발전량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
+          <div class="content-card">
+            <div class="card-head">
+              <span>전월</span>
+              <span>+</span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                발전량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                공급량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
           </div>
-          <div class="card-details-top">
-            <span>
-              공급량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
+          <div class="content-card">
+            <div class="card-head">
+              <span>금년</span>
+              <span>+</span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                발전량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                공급량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="content-card">
-          <div class="card-head">
-            <span>전월</span>
-            <span>+</span>
-          </div>
-          <div class="card-details-top">
-            <span>
-              발전량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
-          </div>
-          <div class="card-details-top">
-            <span>
-              공급량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
-          </div>
-        </div>
-        <div class="content-card">
-          <div class="card-head">
-            <span>금년</span>
-            <span>+</span>
-          </div>
-          <div class="card-details-top">
-            <span>
-              발전량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
-          </div>
-          <div class="card-details-top">
-            <span>
-              공급량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
-          </div>
-        </div>
-        <div class="content-card">
-          <div class="card-head">
-            <span>전년</span>
-            <span>+</span>
-          </div>
-          <div class="card-details-top">
-            <span>
-              발전량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
-          </div>
-          <div class="card-details-top">
-            <span>
-              공급량
-              <span>999 </span>
-              <span>MWh</span>
-            </span>
+          <div class="content-card">
+            <div class="card-head">
+              <span>전년</span>
+              <span>+</span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                발전량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
+            <div class="card-details-top">
+              <span>
+                공급량
+                <span>999 </span>
+                <span>MWh</span>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- superset 작업 -->
-      <div class="bottom-left">
-        <img src="../../img/Frame6340769.png" alt="" />
+        <!-- superset 작업 -->
+        <div class="bottom-left">
+          <img src="../../img/Frame6340769.png" alt="" />
+        </div>
       </div>
     </div>
     <!-- footer -->

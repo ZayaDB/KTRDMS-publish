@@ -1,8 +1,13 @@
+.body-section {
+  height: 1080px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* container-411 */
 .container-411 {
-  width: 782px;
-  height: 160px;
-  flex-shrink: 0;
+  width: 596px;
+  height: 246px;
   border-radius: 12px;
   border: 1px solid #e8e7e7;
   background: #fff;
@@ -25,31 +30,43 @@
 }
 .container-411-left {
   margin-top: 16px;
-  margin-bottom: 23px;
   margin-left: 24px;
   display: flex;
-  width: 359px;
-  height: 77px;
+  width: 265px;
+  height: 160px;
   padding: 24px;
-  border-radius: 12px;
-  background: linear-gradient(287deg, #e9f5ff 4.32%, #c7dff4 94.53%);
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  align-content: center;
+  gap: 40px 20px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  background: var(
+    --trendcard,
+    linear-gradient(287deg, #e9f5ff 4.32%, #c7dff4 94.53%)
+  );
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 .container-411-right {
   margin-top: 16px;
-  margin-bottom: 23px;
-  margin-left: 16px;
+  margin-left: 12px;
   display: flex;
-  width: 359px;
-  height: 77px;
+  width: 265px;
+  height: 160px;
   padding: 24px;
-  border-radius: 12px;
-  background: linear-gradient(287deg, #e9f5ff 4.32%, #c7dff4 94.53%);
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  align-content: center;
+  gap: 40px 20px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  background: var(
+    --trendcard,
+    linear-gradient(287deg, #e9f5ff 4.32%, #c7dff4 94.53%)
+  );
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
 .container-411-left > span:nth-of-type(1),
@@ -85,39 +102,131 @@
 /* container-410 */
 .container-410 {
   position: absolute;
-  top: 206px;
-  right: 422px;
+  top: 469px;
+  left: 300px;
   display: flex;
-  width: 383px;
-  height: 160px;
+  width: 596px;
+  height: 269px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #f1f1f1;
+}
+.tab-container-1 {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  height: 39px;
+  padding-top: 11px;
+  justify-content: flex-start;
+}
+.tab-left {
+  width: 80px;
+  padding: 5px 0 6px 27px;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.card410content {
+  display: none;
+}
+.card410content.active {
+  display: block;
+}
+
+.card409content {
+  display: none;
+}
+.card409content.active {
+  display: block;
+}
+
+.tab-left.active {
+  background-color: #fff;
+  position: relative;
+  color: #3069b3;
+}
+.tab-left.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background-color: rgba(48, 105, 179, 1);
+}
+.card410-header {
+  background: #03428e;
+  padding: 10px 16px;
+  color: #fff;
+  width: 100%;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.card410-header h2 {
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.container-410,
+.card410content-header {
+  box-sizing: border-box;
+}
+.card410content-header {
+  display: flex;
+  width: 596px;
+  height: 39px;
+  padding: 0px 16px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  justify-content: space-between;
+}
+.price-high {
+  display: flex;
+  padding: 6px 0px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 50%;
+}
+.price-low {
+  display: flex;
+  padding: 6px 0px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 50%;
+}
+.price-high span:first-child,
+.price-low span:first-child {
+  color: #03428e;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* container-410  */
+.container-409 {
+  position: absolute;
+  top: 754px;
+  left: 300px;
+  display: flex;
+  width: 596px;
+  height: 269px;
   flex-direction: column;
   align-items: center;
   border-radius: 12px;
-  border: 1px solid #1c5baa;
   background: #f1f1f1;
 }
-
-/* container-412 */
-.container-412 {
-  position: absolute;
-  bottom: 58px;
-  left: 300px;
-  width: 782px;
-  height: 640px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  border: 1px solid #e8e7e7;
-  background: #fff;
-}
-.container-412 .line {
-  width: 782px;
-  height: 1.5px;
-  border: 1px solid rgba(227, 235, 237, 1);
-  position: absolute;
-  top: 42px;
-  left: 0;
-}
-
+/* 매도 매수 정보 container-413 */
 .tab-container {
   display: flex;
   margin-bottom: 20px;
@@ -155,89 +264,85 @@
 }
 
 .tab-content {
-  display: none;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 0 5px 5px 5px;
 }
-
-.tab-content.active {
-  display: block;
+.close {
+  cursor: pointer;
+  float: right;
 }
-
 .container-413 {
   position: absolute;
   bottom: 58px;
-  left: 1097px;
-  width: 782px;
-  height: 640px;
+  right: 32px;
+  width: 976px;
+  height: 816px;
   flex-shrink: 0;
   border-radius: 12px;
   border: 1px solid #e8e7e7;
   background: #fff;
 }
 .container-413 .line {
-  width: 782px;
+  width: 923px;
   height: 1.5px;
   border: 1px solid rgba(227, 235, 237, 1);
   position: absolute;
   top: 42px;
-  left: 0;
+  left: 30px;
 }
 
-table {
-  width: 736px;
-  height: 480px;
+#table2 {
+  table-layout: fixed;
   border-collapse: collapse;
   text-align: center;
+  width: 100%;
 }
-th {
+#table2 th {
   background: rgba(237, 239, 245, 1);
   white-space: nowrap;
-  width: 142px;
+  width: 100%;
   height: 48px;
   padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  text-align: center;
+  table-layout: auto;
   color: #333;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   border-top: 1px solid black;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
 }
-
-td {
-  border-top: 1px solid black;
-  border-bottom: 1px solid rgba(235, 235, 235, 1);
-  padding: 8px;
+#table2 th > span {
   color: #333;
-  font-size: 14px;
-  font-style: normal;
+  font-size: 12px;
   font-weight: 400;
-  line-height: normal;
 }
-
+#table2 td {
+  border-top: 1px solid black;
+  border-bottom: 1px solid rgba(235, 235, 235, 1);
+  color: #333;
+  font-size: 16px;
+  height: 48px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  padding: 10px;
+}
+#table2 [title="상세보기"] {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .btn-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  gap: 10px;
 }
 .btn-order {
-  display: inline-flex;
   padding: 6px 48px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   border-radius: 3px;
   background: #03428e;
   cursor: pointer;
   color: #fff;
-  border: none;
   font-size: 15px;
-  font-style: normal;
   font-weight: 700;
 }
 
@@ -262,7 +367,6 @@ td {
   border: 1px solid #888;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   width: 726px;
-  height: 1000px;
 }
 .modal-content2 {
   background-color: white;
@@ -285,6 +389,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid;
 }
 
 table th,
@@ -297,19 +403,22 @@ table td {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 22.5px */
+  line-height: 150%;
+  border: none;
 }
-
+table tr {
+  border-bottom: 1px solid #ebebeb;
+}
 table th {
   background-color: #f2f2f2;
   font-weight: bold;
   width: 30%;
-  vertical-align: top;
+  vertical-align: middle;
   color: #1d1d1d;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 22.5px */
+  line-height: 150%;
 }
 .table-button {
   width: 110px;
@@ -327,7 +436,7 @@ table th {
   font-style: normal;
   font-weight: 700;
   margin-left: 8px;
-  line-height: 24px; /* 160% */
+  line-height: 24px;
 }
 table td input,
 table td select,
@@ -360,11 +469,30 @@ table td input[type="checkbox"] {
   background: #f5f6fa;
   height: 149px;
 }
-
+.file-upload button {
+  display: flex;
+  padding: 6px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--font06, #b3b3b3);
+  background: var(--gray-0, #fff);
+  color: var(--gray-80, var(--font03, #333));
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 160% */
+}
 .file-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  width: 480px;
+  padding: 4px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+  background: #f5f6fa;
 }
 
 .file-list li {

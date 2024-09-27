@@ -78,24 +78,40 @@ window.onload = function () {
     menu.style.display = "none";
   });
 };
-
 // JavaScript to handle tab clicks
-document.querySelectorAll(".tab").forEach((tab) => {
+document.querySelectorAll(".tab-left").forEach((tab) => {
   tab.addEventListener("click", function () {
-    const parentContainer = this.closest(".container-412");
+    const parentContainer = this.closest(".container-410");
     parentContainer
-      .querySelectorAll(".tab")
+      .querySelectorAll(".tab-left")
       .forEach((tab) => tab.classList.remove("active"));
     parentContainer
-      .querySelectorAll(".tab-content")
+      .querySelectorAll(".card410content")
       .forEach((content) => content.classList.remove("active"));
 
-    if (this.getAttribute("data-tab") !== "tab2") {
+    const tabId = this.getAttribute("data-tab");
+
+    if (tabId === "tab4" || tabId === "tab5") {
       this.classList.add("active");
-      const tabId = this.getAttribute("data-tab");
       parentContainer.querySelector(`#${tabId}`).classList.add("active");
-    } else {
-      document.getElementById("modal").style.display = "block";
+    }
+  });
+});
+document.querySelectorAll(".tab-left").forEach((tab) => {
+  tab.addEventListener("click", function () {
+    const parentContainer = this.closest(".container-409");
+    parentContainer
+      .querySelectorAll(".tab-left")
+      .forEach((tab) => tab.classList.remove("active"));
+    parentContainer
+      .querySelectorAll(".card409content")
+      .forEach((content) => content.classList.remove("active"));
+
+    const tabId = this.getAttribute("data-tab");
+
+    if (tabId === "tab6" || tabId === "tab7") {
+      this.classList.add("active");
+      parentContainer.querySelector(`#${tabId}`).classList.add("active");
     }
   });
 });
@@ -105,7 +121,7 @@ const modal1 = document.getElementById("modal1");
 const modal2 = document.getElementById("modal2");
 const closeBtns = document.querySelectorAll(".close");
 const tab1 = document.querySelector('[data-tab="tab2"]');
-const tab2 = document.querySelector('[data-tab="tab4"]');
+const tab2 = document.querySelector('[data-tab="tab3"]');
 
 // tab1 클릭 시 modal1 표시
 tab1.addEventListener("click", () => {
@@ -175,5 +191,28 @@ window.addEventListener("click", (event) => {
   }
   if (event.target === modal6) {
     modal6.style.display = "none";
+  }
+});
+
+const tab3 = document.querySelector('[data-tab="tab4"]');
+const tab4 = document.querySelector('[data-tab="tab5"]');
+
+// tab1 클릭 시 modal1 표시
+tab3.addEventListener("click", () => {
+  modal1.style.display = "block";
+});
+
+// tab2 클릭 시 modal2 표시
+tab4.addEventListener("click", () => {
+  modal2.style.display = "block";
+});
+
+// 모달 외부 클릭 시 닫기
+window.addEventListener("click", (event) => {
+  if (event.target === modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target === modal2) {
+    modal2.style.display = "none";
   }
 });

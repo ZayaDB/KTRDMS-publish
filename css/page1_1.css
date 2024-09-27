@@ -601,45 +601,23 @@
 
 .line {
   position: absolute;
-  height: 2px;
-  background-color: rgba(255, 218, 218, 1);
-  width: 0;
+  height: 100%;
 }
 
 .first {
   top: 320px;
   left: 180px;
-  animation: drawLine 3s linear forwards;
+  background-image: url(../img/Component41.png);
+  background-repeat: no-repeat;
+  animation: drawLine 3s linear;
 }
 
 .second {
   top: 320px;
   left: 649px;
+  background-image: url(../img/Component41.png);
+  background-repeat: no-repeat;
   animation: drawLine 3s linear forwards;
-  animation-delay: 3s;
-}
-
-.arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid rgba(243, 111, 64, 1);
-  transform: translateX(-100%);
-  transform: rotate(-90deg);
-}
-
-.first-arrow {
-  top: 315px;
-  margin-left: 170px;
-  animation: moveArrow 3s linear forwards;
-}
-
-.second-arrow {
-  top: 315px;
-  margin-left: 640px;
-  animation: moveArrow 3s linear forwards;
   animation-delay: 3s;
 }
 

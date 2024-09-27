@@ -1,3 +1,46 @@
+ <!-- 필터 -->
+    <div class="filter">
+      <div class="filter-year">
+        <img src="../../img/Group34798.svg" alt="" />
+        <label class="required" for="title-input">연도</label>
+        <select id="value-select">
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+        </select>
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+      </div>
+      <div class="filter-year">
+        <img src="../../img/filter-Vector.svg" alt="" />
+        <label for="title-input">산업단지</label>
+        <select id="value-select">
+          <option value="2024">인천남동</option>
+        </select>
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+        <img class="search" src="../../img/search.png" alt="" />
+      </div>
+      <div class="filter-year">
+        <img src="../../img/powerplant_icon012.svg " alt="" />
+        <label for="title-input">발전사업자</label>
+        <select id="value-select">
+          <option value="2024">전체</option>
+        </select>
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+        <img class="search" src="../../img/search.png" alt="" />
+      </div>
+      <div class="filter-year">
+        <img src="../../img/powerplant_icon012.svg" alt="" />
+        <label for="title-input">전기사용자</label>
+        <select id="value-select">
+          <option value="2024">전체</option>
+        </select>
+        <img class="fas1" src="../../img/Vector249.svg" alt="" />
+        <img class="search" src="../../img/search.png" alt="" />
+      </div>
+      <button class="submit-btn">조회</button>
+    </div>
+
 /* filter */
 #value-select {
   display: flex;
